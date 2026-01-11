@@ -1064,8 +1064,17 @@
 .timeline-detail h3 {
   font-size: var(--text-2xl);
   margin-bottom: 1.5rem;
-  color: var(--nwestco-white);
+  color: var(--nwestco-green-light);
   font-weight: var(--font-bold);
+}
+
+/* Override green accents in timeline-detail body text - keep all white */
+.timeline-detail .text-accent {
+  color: var(--nwestco-white);
+}
+
+.timeline-detail .detail-stat .text-accent {
+  color: var(--nwestco-white);
 }
 
 .timeline-detail ul {
