@@ -2605,6 +2605,10 @@
   border-radius: 2px;
 }
 
+.contact-section.no-title-underline .section-title::after {
+  display: none;
+}
+
 
 /* ============================================================
    BUTTONS - Enhanced with shadows
