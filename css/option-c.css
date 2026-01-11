@@ -2666,12 +2666,10 @@
 
 
 /* ============================================================
-   WHY NWESTCO SECTION - Green numbered headings
+   WHY NWESTCO SECTION
    ============================================================ */
 
-.unique-item h3::first-letter {
-  color: var(--nwestco-green-light);
-}
+/* first-letter green removed - numbers now blue */
 
 
 /* ============================================================
