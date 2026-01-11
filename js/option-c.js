@@ -339,20 +339,18 @@
       if (trigger) {
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
-          card.classList.add('flipped');
+          card.classList.toggle('flipped');
         });
       }
 
-      // Click anywhere on card to flip (mobile-friendly)
+      // Click anywhere on card to toggle flip (mobile-friendly)
       card.addEventListener('click', (e) => {
         // Don't flip if clicking on a link
         if (e.target.tagName === 'A' || e.target.closest('a')) {
           return;
         }
 
-        if (!card.classList.contains('flipped')) {
-          card.classList.add('flipped');
-        }
+        card.classList.toggle('flipped');
       });
 
       // Double-click or long-press to flip back
