@@ -2442,17 +2442,7 @@
    ============================================================ */
 
 .pain-points-section {
-  position: relative;
-}
-
-.pain-points-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, var(--nwestco-green) 0%, var(--nwestco-green-light) 50%, var(--nwestco-green) 100%);
+  /* green bar removed */
 }
 
 .flip-card-front {
@@ -2514,20 +2504,7 @@
 }
 
 .stat-card {
-  position: relative;
-  padding-top: 2rem;
-}
-
-.stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--nwestco-blue) 0%, var(--nwestco-green) 100%);
-  border-radius: 2px;
+  /* green gradient bar removed */
 }
 
 
