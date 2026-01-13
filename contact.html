@@ -22,6 +22,96 @@
   <link rel="stylesheet" href="assets/css/buttons.css">
   <link rel="stylesheet" href="assets/css/forms.css">
   <link rel="stylesheet" href="css/option-c.css">
+
+  <!-- JotForm Custom Styles - Match NWestCo Design -->
+  <style>
+    /* JotForm container styling - light background context */
+    #jotform-contact {
+      background: var(--nwestco-neutral-50) !important;
+      border-radius: 8px !important;
+      padding: 1rem !important;
+      min-height: 500px;
+    }
+
+    #jotform-contact iframe {
+      border: none !important;
+      width: 100% !important;
+      min-height: 600px !important;
+    }
+
+    /* JotForm embedded styles (applied via iframe) */
+    .jotform-form * {
+      font-family: 'Lato', sans-serif !important;
+    }
+
+    /* Form labels */
+    .jotform-form .form-label,
+    .jotform-form label {
+      color: #333 !important;
+      font-family: 'Lato', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Form inputs */
+    .jotform-form input,
+    .jotform-form select,
+    .jotform-form textarea {
+      background: #fff !important;
+      border: 1px solid #ddd !important;
+      border-radius: 4px !important;
+      font-family: 'Open Sans', sans-serif !important;
+      color: #333 !important;
+    }
+
+    .jotform-form input:focus,
+    .jotform-form select:focus,
+    .jotform-form textarea:focus {
+      border-color: #25617c !important;
+      outline: none !important;
+      box-shadow: 0 0 0 2px rgba(37, 97, 124, 0.1) !important;
+    }
+
+    /* Submit button - NWestCo green gradient */
+    .jotform-form .form-submit-button,
+    .jotform-form [type="submit"],
+    .jotform-form .jf-form-buttons button {
+      background: linear-gradient(135deg, #709944 0%, #8fae5e 100%) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 4px !important;
+      padding: 14px 32px !important;
+      font-family: 'Lato', sans-serif !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1px !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .jotform-form .form-submit-button:hover,
+    .jotform-form [type="submit"]:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 20px rgba(143, 174, 94, 0.4) !important;
+    }
+
+    /* Headings in form */
+    .jotform-form h1,
+    .jotform-form h2,
+    .jotform-form h3 {
+      color: #25617c !important;
+      font-family: 'Lato', sans-serif !important;
+      font-weight: 700 !important;
+    }
+
+    /* Links */
+    .jotform-form a {
+      color: #709944 !important;
+    }
+
+    .jotform-form a:hover {
+      color: #8fae5e !important;
+    }
+  </style>
   <!-- BugHerd QA Tracking -->
   <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=zb2b4odpfibiskidt9myaq" async="true"></script>
 </head>
@@ -215,65 +305,13 @@
         <div class="contact-form-wrapper" style="max-width: 800px; margin: 0 auto; background: var(--nwestco-neutral-50); padding: 3rem; border-radius: var(--radius-lg);">
           <h2 style="text-align: center; margin-bottom: 2rem; color: var(--nwestco-blue);">Send Us a Message</h2>
 
-          <form class="contact-form" id="contactForm">
-            <div class="form-grid form-grid-2">
-              <div class="form-group">
-                <label for="name" class="required">Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-
-              <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company">
-              </div>
-
-              <div class="form-group">
-                <label for="email" class="required">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone">
-              </div>
-
-              <div class="form-group">
-                <label for="service" class="required">I need help with</label>
-                <select id="service" name="service" required>
-                  <option value="">Select a service...</option>
-                  <option value="emergency">Emergency Service</option>
-                  <option value="fuel">Fuel Systems</option>
-                  <option value="carwash">Car Wash</option>
-                  <option value="environmental">Environmental/Compliance</option>
-                  <option value="installation">New Installation/Construction</option>
-                  <option value="equipment">Equipment/Parts</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="location">Your Location</label>
-                <select id="location" name="location">
-                  <option value="">Select state...</option>
-                  <option value="wa">Washington</option>
-                  <option value="or">Oregon</option>
-                  <option value="id">Idaho</option>
-                  <option value="mt">Montana</option>
-                  <option value="ca">California</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group form-group-full">
-                <label for="message" class="required">Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or service needs..."></textarea>
-              </div>
-
-              <div class="form-group form-group-full">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
-              </div>
-            </div>
-          </form>
+          <!-- JotForm Contact Form Embed -->
+          <div id="jotform-contact">
+            <script src="https://nwestco.jotform.com/jsform/260117846711051"></script>
+            <noscript>
+              <p style="text-align: center; padding: 2rem;">Please enable JavaScript to use the contact form, or email us directly at <a href="mailto:info@nwestco.com">info@nwestco.com</a></p>
+            </noscript>
+          </div>
         </div>
       </div>
     </section>
